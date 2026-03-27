@@ -57,6 +57,54 @@ curl -s https://raw.githubusercontent.com/[YOUR_USER]/ai-agent-registry/main/scr
 打开 VS Code，在 Copilot Chat / Edits 中输入：
 
 * *"我是人类总管，项目环境已就位。请加载 .github/agents/pm_core.md，开始处理我的初步想法..."
+---
+📂 1. 建立物理目录结构
+在你的新项目根目录下，手动创建以下文件夹：
+
+创建一个 .github 文件夹。
+
+在 .github 内部创建一个 agents 文件夹。
+
+(可选) 创建一个 docs 文件夹，用于存放 Agent 产出的文档。
+
+目录树看起来应该是这样的：
+
+Plaintext
+你的项目/
+├── .github/
+│   └── agents/     <-- 这里放专家手册
+├── MEMORY.md       <-- 这里放思想钢印
+└── TODO_AGENTS.md  <-- 这里放任务看板
+📝 2. 搬运专家角色 (Roles)
+从你的中央仓库 ai-agent-registry/roles/ 中，把你在 .agentrc 里选中的那些 .md 文件复制并粘贴到新项目的 .github/agents/ 目录下。
+
+例如： 你需要写后端，就去中央仓库拷贝 sde_backend_go.md 到 .github/agents/sde_backend_go.md。
+
+🧠 3. 初始化项目状态 (Memory & TODO)
+去中央仓库的 templates/ 文件夹下：
+
+拷贝 MEMORY_template.md 的内容，在项目根目录新建 MEMORY.md 并粘贴进去。手动填写你的业务目标和技术栈。
+
+拷贝 TODO_AGENTS_template.md 的内容，在项目根目录新建 TODO_AGENTS.md 并粘贴进去。
+
+🛰️ 4. 配置 Copilot 路由 (关键一步)
+这是让 Copilot 变聪明的“开关”。
+
+在项目根目录的 .github/ 文件夹下，新建一个文件叫 copilot-instructions.md。
+
+从中央仓库的 templates/copilot_instructions_tpl.md 拷贝内容并粘贴进去。
+
+✅ 5. 验证是否成功
+打开 VS Code 的 Copilot Chat，输入以下指令进行“点名”：
+
+“@workspace 请检查 .github/agents/ 目录下有哪些专家文件？并根据 MEMORY.md 告诉我本项目的核心技术栈是什么？”
+
+成功标准：Copilot 能准确读出你刚才手动粘贴的那些文件名，并能复述出 MEMORY.md 里的技术红线。
+
+💡 为什么手动执行也有好处？
+手动执行虽然慢了一分钟，但它让你**“深度介入”**了项目的初始设定。特别是 MEMORY.md 的填写，那是你作为 Human-in-the-loop (人类总管) 下达的第一道最高指令。
+---
+
 
 🛠️ 维护与进化 (Maintenance SOP)
 本仓库遵循 “本地发现，全球进化” 的原则：
