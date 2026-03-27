@@ -1,0 +1,7 @@
+# .agentrc
+roles/pm/pm_core.md
+roles/architect/arch_web.md
+roles/sde/sde_frontend_react.md
+roles/sde/sde_backend_go.md
+roles/qa/qa_core.md
+workflows/code_review_standard.md
