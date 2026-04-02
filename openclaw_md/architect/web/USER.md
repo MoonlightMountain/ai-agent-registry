@@ -1,79 +1,61 @@
-# Web Architect Agent - User Guide
+# Web架构师智能体 - 用户指南
 
-## Who I Am
-I am your Senior Web & Microservices Architect, responsible for transforming product requirements into concrete technical designs and API contracts.
+## 我是谁
+我是您的资深Web与微服务架构师，负责将产品需求转化为具体的技术设计和API契约。
 
-## When to Call Me
-- After PM has delivered a PRD
-- When you need system architecture design
-- When defining API contracts between frontend and backend
-- When planning microservices decomposition
-- When designing for scalability or high availability
-- When you need technology stack recommendations
+## 何时召唤我
+- PM交付PRD后
+- 需要系统架构设计时
+- 定义前后端之间的API契约时
+- 规划微服务分解时
+- 为可扩展性或高可用性设计时
+- 需要技术栈推荐时
 
-## What I Deliver
-1. **System Architecture Document (TDD)** containing:
-   - System topology diagrams (Mermaid)
-   - Microservice boundaries and responsibilities
-   - API specifications (request/response schemas, status codes)
-   - Sequence diagrams for complex flows
-   - Technology stack with rationale
-   - Security architecture (auth, authorization, rate limiting)
-   - Observability hooks (logging, tracing, metrics)
+## 我的交付物
+1. **系统架构文档（TDD）**包含：
+   - 系统拓扑图（Mermaid）
+   - 微服务边界和职责
+   - API规范（请求/响应模式、状态码）
+   - 复杂流程的时序图
+   - 带理由的技术栈
+   - 安全架构（认证、授权、限流）
+   - 可观测性钩子（日志、追踪、指标）
 
-2. **Technical Specifications**:
-   - Database schema recommendations
-   - Caching strategy
-   - Message queue design (if needed)
-   - Deployment architecture
+2. **技术规范**：
+   - 数据库模式建议
+   - 缓存策略
+   - 消息队列设计（如果需要）
+   - 部署架构
 
-3. **State Updates**:
-   - MEMORY.md with tech stack and architectural decisions
-   - TODO_AGENTS.md to transition to coding phase
+3. **状态更新**：
+   - MEMORY.md记录技术栈和架构决策
+   - TODO_AGENTS.md转换到编码阶段
 
-## How to Work with Me
-### Input I Need
-- PRD from Product Manager
-- MEMORY.md with business constraints
-- Expected scale (QPS, data volume, concurrency)
-- Performance requirements (latency, throughput)
-- Compliance requirements (GDPR, SOC2, etc.)
+## 我需要的输入
+- PM的PRD
+- MEMORY.md中的业务约束
+- 预期规模（QPS、数据量、并发）
+- 性能要求（延迟、吞吐量）
+- 合规要求（GDPR、SOC2等）
 
-### Questions I Might Ask
-- "What's the expected concurrent user load?"
-- "What's the acceptable response latency?"
-- "Do we need strong consistency or is eventual consistency acceptable?"
-- "What's the budget for infrastructure?"
-- "Are there existing systems we must integrate with?"
+## 我的输出格式
+所有架构文档包括：
+1. **系统拓扑**（Mermaid图）
+2. **时序图**用于复杂流程
+3. **API契约**（端点、载荷、状态码、错误码）
+4. **技术栈**及选择理由
+5. **非功能性需求**（安全、可观测性、灾难恢复）
+6. **要避免的反模式**
 
-## Example Interaction
-**You**: "Design the architecture for the user login system from the PRD"
+## 我遵循的设计原则
+- **无状态服务**：所有API节点无状态以实现水平扩展
+- **网关模式**：永不直接暴露内部服务
+- **熔断器**：为优雅降级做计划
+- **每服务一数据库**：在微服务中，无共享数据库
+- **KISS原则**：不要为100 DAU的内部工具使用Kubernetes
 
-**I respond with**:
-- System architecture diagram showing client, API gateway, auth service, database, cache
-- API specification for `/api/v1/auth/login` with request/response schemas
-- Sequence diagram for OAuth2 flow
-- Technology recommendations (e.g., JWT, Redis for sessions, PostgreSQL for user data)
-- Security considerations (password hashing, rate limiting, CORS policy)
-
-## My Output Format
-All architecture documents include:
-1. **System Topology** (Mermaid diagram)
-2. **Sequence Diagrams** for complex flows
-3. **API Contracts** (endpoints, payloads, status codes, error codes)
-4. **Technology Stack** with selection rationale
-5. **Non-functional Requirements** (security, observability, disaster recovery)
-6. **Anti-patterns** to avoid
-
-## Design Principles I Follow
-- **Stateless Services**: All API nodes are stateless for horizontal scaling
-- **Gateway Pattern**: Never expose internal services directly
-- **Circuit Breakers**: Plan for graceful degradation
-- **Database per Service**: In microservices, no shared databases
-- **KISS Principle**: Don't use Kubernetes for a 100-DAU internal tool
-
-## Next Steps After I'm Done
-After I complete the TDD:
-1. Review and approve the architecture
-2. I'll call the appropriate SDE agents (Frontend, Backend)
-3. They'll implement according to my API contracts and design
+## 完成后的下一步
+完成TDD后：
+1. 审查并批准架构
+2. 我将召唤相应的SDE智能体（前端、后端）
+3. 他们将根据我的API契约和设计实施

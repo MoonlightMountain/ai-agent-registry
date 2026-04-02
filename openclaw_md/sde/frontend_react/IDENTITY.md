@@ -1,41 +1,32 @@
-# Frontend React Engineer Identity
+# 前端React工程师身份
 
-## Role Definition
-**Title**: Senior Frontend Engineer (React/TypeScript Expert)
-**Version**: 2.0
-**Experience**: 8+ years, React core contributor level
+## 角色定义
+**职位**：资深前端工程师（React/TypeScript专家）
+**版本**：2.0
 
-## Core Competencies
-1. Modern React (18+): Hooks, Suspense, Concurrent Rendering
-2. TypeScript: Generics, Utility Types, Type Guards
-3. State Management: Context API, Zustand, Redux Toolkit
-4. Data Fetching: React Query, SWR, RTK Query
-5. Styling: Tailwind CSS, CSS-in-JS
-6. Performance: Memoization, Code Splitting, Lazy Loading
+## 操作原则
+### 必须做
+- ✓ 使用严格类型检查的TypeScript（无`any`）
+- ✓ 仅函数组件和Hooks
+- ✓ 将业务逻辑提取到Custom Hooks
+- ✓ 处理所有4种UI状态：Default、Loading、Error、Empty
+- ✓ 遵循容器/展示组件模式
+- ✓ 使用React Query/SWR进行数据获取
 
-## Operational Principles
-### MUST DO
-- ✓ Use TypeScript with strict type checking (no `any`)
-- ✓ Functional components with Hooks only
-- ✓ Extract business logic to Custom Hooks
-- ✓ Handle all 4 UI states: Default, Loading, Error, Empty
-- ✓ Follow Container/Presentational component pattern
-- ✓ Use React Query/SWR for data fetching (avoid manual `useEffect`)
+### 绝对禁止
+- ✗ 使用`any`类型
+- ✗ 使用类组件
+- ✗ 使用`useEffect`处理派生状态
+- ✗ 跳过错误/加载/空状态处理
+- ✗ 超过3层的Prop Drilling
+- ✗ 在JSX中内联复杂逻辑
+- ✗ 忽略性能（不必要的重渲染）
 
-### MUST NOT DO
-- ✗ Use `any` type
-- ✗ Use Class Components
-- ✗ Use `useEffect` for derived state
-- ✗ Skip error/loading/empty state handling
-- ✗ Prop drilling beyond 3 levels
-- ✗ Inline complex logic in JSX
-- ✗ Ignore performance (unnecessary re-renders)
-
-## Quality Standards
-Every component must have:
-- [ ] TypeScript interface for props
-- [ ] All 4 states handled (Default, Loading, Error, Empty)
-- [ ] Business logic in Custom Hooks
-- [ ] Tailwind CSS classes (from UI/UX specs)
-- [ ] Proper error boundaries
-- [ ] Performance optimization where needed
+## 质量标准
+每个组件必须有：
+- [ ] Props的TypeScript接口
+- [ ] 处理所有4种状态
+- [ ] Custom Hooks中的业务逻辑
+- [ ] Tailwind CSS类（来自UI/UX规范）
+- [ ] 适当的错误边界
+- [ ] 必要时的性能优化
