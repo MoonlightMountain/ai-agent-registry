@@ -10,16 +10,26 @@ ai-agent-registry 是一个中心化的 AI 智能体资产库。它通过 Prompt
 
 ## 🏛️ 组织架构图 (Architecture Overview)
 
-本项目将复杂的软件开发生命周期（SDLC）解构为以下核心模块：
+本项目将复杂的软件开发生命周期（SDLC）和企业管理解构为以下核心模块：
 
 ### 1. 🎭 精锐角色 (Roles)
 
+#### 软件研发团队 (Development Team)
 - **Product Manager**: 产出无歧义的 BDD 格式 PRD。
 - **Architect (Web/Data)**: 负责高并发设计、ER 图建模与 API 契约。
 - **SDE Matrix**: 覆盖 React, Go, Java, Swift, Python 的领域专家，严守工程红线。
 - **UI/UX Designer**: 将需求转化为 Tailwind 语义与 DOM 树骨架。
 - **QA (SDET)**: 自动化测试防线，拒绝任何没有测试的代码。
 - **DevOps/SRE**: 容器化、IaC 与 CI/CD 专家。
+
+#### 企业决策层 (C-Level Executives) - 新增！
+- **情报官 (Intelligence Officer)**: 全球资讯监控、热点筛选、趋势分析专家。24/7 追踪国际国内新闻动态。
+- **经济分析专家 (Economic Analyst)**: 宏观经济分析、政策影响评估、市场趋势预测，使用概率思维提供严谨的经济洞察。
+- **首席财务官 (CFO)**: 财务战略、资本管理、投资评估、风险控制，守护企业财务健康。
+- **首席技术官 (CTO)**: 技术战略、架构决策、研发管理、创新驱动，引领技术方向。
+- **首席运营官 (COO)**: 运营卓越、流程优化、供应链管理、质量保证，确保高效执行。
+- **首席营销官 (CMO)**: 品牌战略、市场增长、客户获取、数字营销，驱动业务增长。
+- **首席人力资源官 (CHRO)**: 人才战略、组织发展、文化建设、绩效管理，打造高绩效团队。
 
 ### 2. 📜 运行规范 (Workflows)
 
@@ -30,6 +40,28 @@ ai-agent-registry 是一个中心化的 AI 智能体资产库。它通过 Prompt
 
 - **MEMORY.md**: 项目的"思想钢印"，解决 AI 上下文溢出与失忆问题。
 - **TODO_AGENTS.md**: 动态看板，驱动 Agent 之间的接力棒传递。
+
+### 4. 🌐 OpenClaw 格式专家定义 (OpenClaw Agent Definitions)
+
+在 `openclaw_md/` 目录下，我们为每个专家角色提供了完整的 OpenClaw 格式定义文件，适配 OpenClaw 等 AI Agent 框架：
+
+- **SOUL.md**: 定义专家的核心身份、使命、价值观和能力
+- **USER.md**: 用户使用指南，说明何时调用、如何协作
+- **IDENTITY.md**: 详细的角色定义、能力模型、操作原则
+- **BOOTSTRAP.md**: 初始化序列、启动命令、工作流程
+
+每个 C-level 专家和支持专家都有完整的四件套文件，可直接用于 OpenClaw 或类似 AI Agent 系统。
+
+### 5. 📖 专家协作指导手册 (Expert Collaboration Guide)
+
+详见 `docs/EXPERT_COLLABORATION_GUIDE.md`，包含：
+- 专家团队架构和协作模式
+- 典型业务场景的协作流程（战略规划、并购决策、危机应对等）
+- 专家调用决策树
+- 定期协作会议机制
+- 快速响应机制
+
+**通过这套体系，将个人开发能力提升为超级跨国集团的智慧决策体系！**
 
 ---
 
