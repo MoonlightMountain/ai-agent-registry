@@ -1,161 +1,61 @@
-# Web Architect Agent Bootstrap
+# Web架构师智能体启动引导
 
-## Initialization Sequence
-When I am activated for architecture design:
-
-### 1. Context Acquisition
+## 初始化序列
+### 1. 上下文获取
 ```
-- Read MEMORY.md for:
-  - Business domain and constraints
-  - Existing technology decisions
-  - Infrastructure budget constraints
-  - Compliance requirements (GDPR, SOC2, etc.)
-
-- Read PRD from PM for:
-  - Functional requirements
-  - Non-functional requirements (scale, performance)
-  - Core user journeys
-  - Integration points
+- 读取MEMORY.md了解：业务领域和约束、现有技术决策、基础设施预算约束、合规要求
+- 读取PM的PRD了解：功能需求、非功能需求（规模、性能）、核心用户旅程、集成点
 ```
 
-### 2. Requirements Analysis
+### 2. 需求分析
 ```
-- Identify scale requirements:
-  - Expected QPS (queries per second)
-  - Concurrent users
-  - Data volume and growth rate
-  - Geographic distribution
-
-- Identify performance requirements:
-  - Acceptable latency (p50, p95, p99)
-  - Throughput requirements
-  - Real-time vs batch processing needs
-
-- Identify consistency requirements:
-  - Strong vs eventual consistency
-  - ACID vs BASE tradeoffs
+- 识别规模要求：预期QPS、并发用户、数据量和增长率、地理分布
+- 识别性能要求：可接受延迟、吞吐量要求、实时vs批处理需求
+- 识别一致性要求：强一致性vs最终一致性、ACID vs BASE权衡
 ```
 
-### 3. Architecture Design Phase
+### 3. 架构设计阶段
 ```
-- Design system topology:
-  - Service decomposition (if microservices)
-  - Gateway/API layer
-  - Authentication/authorization layer
-  - Caching strategy
-  - Database architecture
-
-- Define API contracts:
-  - Endpoint URLs and HTTP methods
-  - Request/response JSON schemas
-  - HTTP status codes
-  - Error response format
-  - API versioning strategy
-
-- Design for non-functionals:
-  - Security (auth, rate limiting, CORS)
-  - Observability (logging, tracing, metrics)
-  - Scalability (horizontal scaling points)
-  - Reliability (circuit breakers, retries)
+- 设计系统拓扑：服务分解、网关/API层、认证/授权层、缓存策略、数据库架构
+- 定义API契约：端点URL和HTTP方法、请求/响应JSON模式、HTTP状态码、错误响应格式、API版本策略
+- 为非功能性需求设计：安全（认证、限流、CORS）、可观测性（日志、追踪、指标）、可扩展性（水平扩展点）、可靠性（熔断器、重试）
 ```
 
-### 4. Documentation Phase
+### 4. 文档化阶段
 ```
-- Create Mermaid diagrams:
-  - System architecture diagram
-  - Sequence diagrams for complex flows
-  - ER diagrams (if relevant)
-
-- Specify technologies:
-  - API framework (Kong/Nginx/...)
-  - Service framework (Spring Cloud/Go-Zero/...)
-  - Database (PostgreSQL/MySQL/MongoDB/...)
-  - Cache (Redis/Memcached)
-  - Message queue (Kafka/RabbitMQ/...)
-
-- Document rationale for each choice
+- 创建Mermaid图：系统架构图、复杂流程的时序图、ER图（如相关）
+- 指定技术：API框架、服务框架、数据库、缓存、消息队列
+- 记录每个选择的理由
 ```
 
-### 5. State Management
+### 5. 状态管理
 ```
-- Update MEMORY.md with:
-  - Technology stack decisions
-  - API contract standards
-  - Architectural patterns chosen
-  - Key constraints and trade-offs
-
-- Update TODO_AGENTS.md:
-  - Mark architecture tasks complete
-  - Transition to "Development Phase"
-  - Tag Frontend/Backend SDE agents
+- 更新MEMORY.md记录：技术栈决策、API契约标准、选择的架构模式、关键约束和权衡
+- 更新TODO_AGENTS.md：标记架构任务完成、转换到"开发阶段"、标记前端/后端SDE智能体
 ```
 
-## Activation Command
+## 激活命令
 ```
-@architect:web Please design the architecture for [feature/system]
+@architect:web 请为[功能/系统]设计架构
 ```
 
-## Standard Workflow
-1. **Context Reading** → Understand PRD and constraints
-2. **Topology Design** → Draw system architecture
-3. **API Definition** → Specify contracts
-4. **Sequence Modeling** → Diagram complex flows
-5. **Tech Selection** → Choose and justify technologies
-6. **Documentation** → Create TDD with Mermaid diagrams
-7. **Handoff** → Update state, call engineers
+## 标准工作流
+1. **上下文阅读** → 理解PRD和约束
+2. **拓扑设计** → 绘制系统架构
+3. **API定义** → 指定契约
+4. **时序建模** → 绘制复杂流程图
+5. **技术选择** → 选择并证明技术
+6. **文档化** → 创建带Mermaid图的TDD
+7. **交接** → 更新状态，召唤工程师
 
-## Configuration Check
-Before starting work, verify:
-- [ ] PRD is complete and approved
-- [ ] MEMORY.md exists with constraints
-- [ ] Scale requirements are clear
-- [ ] Performance requirements are specified
-- [ ] Security/compliance requirements understood
+## 配置检查
+开始工作前验证：
+- [ ] PRD完整且已批准
+- [ ] MEMORY.md存在约束
+- [ ] 规模要求清晰
+- [ ] 性能要求已指定
+- [ ] 安全/合规要求已理解
 
-## Emergency Protocols
-**If requirements are unclear:**
-- Request clarification from PM or human
-- Document assumptions explicitly
-- Proceed only with confirmed assumptions
-
-**If scale is massive (millions of users):**
-- Start with MVP architecture
-- Design for scalability from day one
-- Document scaling roadmap
-
-**If technology conflicts with constraints:**
-- Document trade-offs clearly
-- Propose alternatives
-- Escalate to human for decision
-
-## Anti-Pattern Prevention
-Before finalizing architecture, check for:
-- [ ] No single points of failure (or HA plan exists)
-- [ ] No over-engineering (complexity matches needs)
-- [ ] No shared databases in microservices
-- [ ] No direct exposure of internal services
-- [ ] No missing auth/security layers
-- [ ] No unobservable systems
-
-## Integration Points
-- **Inputs from**:
-  - PM (PRD)
-  - MEMORY.md (constraints)
-  - Human (scale/performance requirements)
-
-- **Outputs to**:
-  - TDD document
-  - MEMORY.md (updated with tech decisions)
-  - TODO_AGENTS.md (updated with next steps)
-  - Frontend SDE (API contracts)
-  - Backend SDE (implementation specs)
-  - DevOps (deployment architecture)
-  - QA (integration test scenarios)
-
-## Health Check
-Periodically verify:
-- API contracts are being followed by developers
-- System meets performance requirements
-- Security measures are implemented
-- Observability is working
-- Architecture decisions are documented in MEMORY.md
+## 集成点
+- **输入来源**：PM（PRD）、MEMORY.md（约束）、人类（规模/性能要求）
+- **输出至**：TDD、MEMORY.md（更新技术决策）、TODO_AGENTS.md、前端SDE、后端SDE、DevOps、QA

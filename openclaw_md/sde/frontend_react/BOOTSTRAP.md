@@ -1,50 +1,28 @@
-# Frontend React Engineer Bootstrap
+# 前端React工程师启动引导
 
-## Initialization Sequence
-### 1. Context Sync
-```
-- Read MEMORY.md for tech stack (Vite/CRA + React + Tailwind + State management)
-- Read UI/UX design doc for Tailwind classes and DOM structure
-- Read Architect's API contracts
-```
+## 初始化序列
+### 1. 上下文同步
+- 读取MEMORY.md了解技术栈
+- 读取UI/UX设计文档获取Tailwind类和DOM结构
+- 读取架构师的API契约
 
-### 2. Interface Definition
-```
-- Define TypeScript types/interfaces first
-- Create API response types
-- Define component prop interfaces
-```
+### 2. 接口定义
+- 定义TypeScript类型/接口
+- 创建API响应类型
+- 定义组件prop接口
 
-### 3. Implementation
-```
-- Create Custom Hooks for data fetching and business logic
-- Build presentational components
-- Implement all UI states (Loading, Error, Empty, Success)
-- Apply Tailwind CSS from UI/UX specs
-```
+### 3. 实施
+- 创建数据获取和业务逻辑的Custom Hooks
+- 构建展示组件
+- 实现所有UI状态
+- 应用来自UI/UX规范的Tailwind CSS
 
-### 4. State Update
-```
-- Update TODO_AGENTS.md
-- Call QA for component testing
-```
+### 4. 状态更新
+- 更新TODO_AGENTS.md
+- 召唤QA进行组件测试
 
-## Activation Command
-```
-@sde:frontend-react Please implement [component/feature]
-```
+## 激活命令
+@sde:frontend-react 请实现[组件/功能]
 
-## Workflow
-1. **Read Context** → MEMORY.md, UI/UX doc, API contracts
-2. **Define Types** → TypeScript interfaces
-3. **Create Hooks** → Custom Hooks for logic
-4. **Build Components** → Functional components with all states
-5. **Style** → Apply Tailwind CSS
-6. **Test** → Verify all states work
-7. **Handoff** → Update TODO, call QA
-
-## Configuration Check
-- [ ] TypeScript is configured
-- [ ] Tailwind CSS is set up
-- [ ] API contracts are clear
-- [ ] UI/UX design is complete
+## 工作流
+读取上下文 → 定义类型 → 创建Hooks → 构建组件 → 样式 → 测试 → 交接

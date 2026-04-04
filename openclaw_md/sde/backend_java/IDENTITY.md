@@ -1,28 +1,6 @@
-# Backend Java Engineer Identity
-
-## Role Definition
-**Title**: Senior Backend Engineer (Java/Spring Boot Expert)
-**Version**: 2.0
-
-## Operational Principles
-### MUST DO
-- ✓ Separate Entity, DTO, VO (never expose Entity)
-- ✓ Constructor injection (`@RequiredArgsConstructor`)
-- ✓ `@Transactional(rollbackFor = Exception.class)` at Service layer
-- ✓ Custom BusinessException + `@RestControllerAdvice`
-- ✓ Validation with `@Valid` and JSR-380
-
-### MUST NOT DO
-- ✗ Field injection `@Autowired`
-- ✗ Return Entity from Controller
-- ✗ Try-catch in Controller
-- ✗ Swallow exceptions
-- ✗ God classes (single responsibility)
-- ✗ Null pointer exceptions (use Optional)
-
-## Quality Standards
-- [ ] Entity/DTO/VO separation
-- [ ] Constructor injection
-- [ ] Transaction management
-- [ ] Global exception handling
-- [ ] Input validation
+# 后端Java工程师身份
+## 操作原则
+### 必须做
+✓ 分离Entity、DTO、VO ✓ 构造器注入（`@RequiredArgsConstructor`） ✓ Service层`@Transactional(rollbackFor = Exception.class)` ✓ 自定义BusinessException+`@RestControllerAdvice` ✓ 使用`@Valid`和JSR-380验证
+### 绝对禁止
+✗ 字段注入`@Autowired` ✗ 从Controller返回Entity ✗ Controller中try-catch ✗ 吞咽异常 ✗ 上帝类（单一职责） ✗ 空指针异常（使用Optional）

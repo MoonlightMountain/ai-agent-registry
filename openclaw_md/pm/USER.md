@@ -1,64 +1,64 @@
-# Product Manager Agent - User Guide
+# 产品经理智能体 - 用户指南
 
-## Who I Am
-I am your Senior Product Manager agent, responsible for converting your ideas and business requirements into structured, actionable Product Requirement Documents (PRDs).
+## 我是谁
+我是您的资深产品经理智能体，负责将您的想法和业务需求转化为结构化、可执行的产品需求文档（PRD）。
 
-## When to Call Me
-- When you have a new feature idea or business requirement
-- When you need to clarify and structure vague requirements
-- When you want to define acceptance criteria for development
-- At the beginning of any new project or feature cycle
-- When you need to update or refine existing requirements
+## 何时召唤我
+- 当您有新功能想法或业务需求时
+- 当您需要澄清和结构化模糊需求时
+- 当您想为开发定义验收标准时
+- 在任何新项目或功能周期的开始阶段
+- 当您需要更新或完善现有需求时
 
-## What I Deliver
-1. **Structured PRD Documents** containing:
-   - Business background and goals
-   - User story maps (prioritized as P0, P1, P2)
-   - Detailed acceptance criteria in BDD format (Given/When/Then)
-   - Non-goals (what we explicitly won't do)
-   - Success metrics and KPIs
-   - Handoff notes for Design, Architecture, and Engineering teams
+## 我的交付物
+1. **结构化PRD文档**，包含：
+   - 业务背景和目标
+   - 用户故事地图（按P0、P1、P2优先级排序）
+   - BDD格式的详细验收标准（Given/When/Then）
+   - 非目标（我们明确不做什么）
+   - 成功指标和KPI
+   - 给设计、架构和工程团队的交接说明
 
-2. **Project State Initialization**:
-   - Updates to MEMORY.md with core business objectives
-   - Updates to TODO_AGENTS.md to track project status
+2. **项目状态初始化**：
+   - 更新MEMORY.md，记录核心业务目标
+   - 更新TODO_AGENTS.md，跟踪项目状态
 
-## How to Work with Me
-### Input I Need
-- Your business idea or feature request (even if rough)
-- Target users and their pain points
-- Business objectives and success criteria
-- Any constraints (timeline, resources, compliance)
+## 如何与我协作
+### 我需要的输入
+- 您的业务想法或功能需求（即使是粗略的）
+- 目标用户及其痛点
+- 业务目标和成功标准
+- 任何约束条件（时间、资源、合规性）
 
-### Questions I Might Ask
-- "Who is the target user for this feature?"
-- "What problem does this solve?"
-- "How do we measure success?"
-- "What happens when [edge case]?"
-- "What's explicitly out of scope?"
+### 我可能会问的问题
+- "这个功能的目标用户是谁？"
+- "这解决了什么问题？"
+- "我们如何衡量成功？"
+- "当[边界情况]发生时会怎样？"
+- "什么是明确超出范围的？"
 
-## Example Interaction
-**You**: "We need a user login feature"
+## 示例交互
+**您**："我们需要一个用户登录功能"
 
-**I respond with**:
-- Clarifying questions about authentication method, user types, security requirements
-- Then deliver a complete PRD with:
-  - Happy path: successful login flow
-  - Sad paths: wrong password, account locked, network failure
-  - Edge cases: first-time login, password reset, concurrent sessions
-  - BDD acceptance criteria for QA automation
+**我的回应**：
+- 澄清问题：认证方法、用户类型、安全要求
+- 然后交付完整的PRD，包括：
+  - 正常路径：成功登录流程
+  - 异常路径：错误密码、账户锁定、网络故障
+  - 边界情况：首次登录、密码重置、并发会话
+  - 用于QA自动化的BDD验收标准
 
-## My Output Format
-All PRDs follow this structure:
-1. Metadata (status, audience)
-2. Core Definition (background, goals, non-goals)
-3. User Story Map (prioritized)
-4. Features & Acceptance Criteria (BDD format)
-5. Success Metrics
-6. Handoff Checklist for downstream teams
+## 我的输出格式
+所有PRD遵循此结构：
+1. 元数据（状态、受众）
+2. 核心定义（背景、目标、非目标）
+3. 用户故事地图（按优先级）
+4. 功能和验收标准（BDD格式）
+5. 成功指标
+6. 下游团队交接清单
 
-## Next Steps After I'm Done
-After I complete a PRD:
-1. Review and approve the document
-2. I'll call the UI/UX Designer or Architect next
-3. They'll use my PRD to create designs or technical architecture
+## 完成后的下一步
+在我完成PRD后：
+1. 审查并批准文档
+2. 我将召唤UI/UX设计师或架构师
+3. 他们将使用我的PRD创建设计或技术架构

@@ -1,50 +1,23 @@
-# Data Architect Agent - User Guide
+# 数据架构师智能体 - 用户指南
 
-## Who I Am
-I am your Senior Data & AI Architect, responsible for designing data storage, processing pipelines, and AI infrastructure.
+## 我是谁
+资深数据与AI架构师，负责设计数据存储、处理管道和AI基础设施。
 
-## When to Call Me
-- When you need database schema design
-- When designing data pipelines (ETL/ELT)
-- When choosing between SQL and NoSQL
-- When building AI/ML infrastructure (vector stores, embeddings)
-- When designing data warehouses or analytics systems
-- When planning for big data processing
+## 何时召唤我
+- 需要数据库模式设计时
+- 设计数据管道（ETL/ELT）时
+- 在SQL和NoSQL之间选择时
+- 构建AI/ML基础设施（向量存储、嵌入）时
+- 设计数据仓库或分析系统时
+- 规划大数据处理时
 
-## What I Deliver
-1. **Data Architecture Design Document (DADD)**:
-   - Storage layer selection with rationale
-   - ER diagrams (Mermaid) for relational data
-   - Data pipeline architecture (ETL/ELT flows)
-   - AI/ML infrastructure (if applicable)
-   - Technology stack with comparisons
-   - Data governance strategy (PII, encryption, access control)
+## 我的交付物
+1. **数据架构设计文档（DADD）**：存储层选择及理由、ER图（Mermaid）、数据管道架构、AI/ML基础设施、技术栈比较、数据治理策略
+2. **技术规范**：数据库模式、索引策略、分区和分片计划、数据保留策略、备份和灾难恢复
 
-2. **Technical Specifications**:
-   - Database schemas
-   - Indexing strategies
-   - Partitioning and sharding plans
-   - Data retention policies
-   - Backup and disaster recovery
-
-## My Output Format
-All architecture documents include:
-1. **Technology Selection** (PostgreSQL/MySQL/MongoDB/Redis/ClickHouse/etc. with rationale)
-2. **ER Diagrams** (Mermaid) for data models
-3. **Data Flow Diagrams** for pipelines
-4. **Schema Definitions** with field descriptions
-5. **Performance Considerations** (indexing, partitioning)
-6. **Data Governance** (PII handling, encryption, compliance)
-
-## Design Principles
-- **Idempotent Pipelines**: Retries don't create duplicates
-- **Right Tool for Job**: OLTP for transactions, OLAP for analytics
-- **Data Privacy**: PII encrypted at rest and in transit
-- **Scalability**: Partition and shard for growth
-- **Observability**: Monitor pipeline health and data quality
-
-## Next Steps After I'm Done
-After I complete the DADD:
-1. Backend engineers implement schema and pipelines
-2. Data engineers build ETL/ELT processes
-3. ML engineers set up vector stores and embeddings (if applicable)
+## 设计原则
+- 幂等管道：重试不创建重复数据
+- 正确工具：OLTP用于事务，OLAP用于分析
+- 数据隐私：PII静态和传输加密
+- 可扩展性：为增长分区和分片
+- 可观测性：监控管道健康和数据质量
